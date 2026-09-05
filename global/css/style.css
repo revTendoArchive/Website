@@ -1,0 +1,13 @@
+:root {
+    --tile: url("/global/image/bg.png");
+    --tile-to-x: 150px;
+    --tile-to-y: -150px;
+}
+
+.first-header b {
+    background: linear-gradient(90deg, var(--nav-a), var(--nav-b));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
