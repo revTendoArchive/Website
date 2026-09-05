@@ -11,11 +11,19 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         const data = fs.readFileSync('web/staff/index.html', 'utf8');
         res.end(data);
+    } else if (req.url == "/3ds/") {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        const data = fs.readFileSync('web/3ds/index.html', 'utf8');
+        res.end(data);
 
     // font files
     } else if (req.url == "/global/font/FOT-RodinNTLG%20Pro%20DB.otf") {
         res.writeHead(200, { 'Content-Type': 'application/font-woff2' });
         const data = fs.readFileSync('global/font/FOT-RodinNTLG Pro DB.otf');
+        res.end(data);
+    } else if (req.url == "/global/font/bank%20gothic%20medium%20bt.ttf") {
+        res.writeHead(200, { 'Content-Type': 'application/font-woff2' });
+        const data = fs.readFileSync('global/font/bank gothic medium bt.ttf');
         res.end(data);
 
     // css files
@@ -26,6 +34,10 @@ const server = http.createServer((req, res) => {
     } else if (req.url == "/global/css/style.css") {
         res.writeHead(200, { 'Content-Type': 'text/css' });
         const data = fs.readFileSync('global/css/style.css', 'utf8');
+        res.end(data);
+    } else if (req.url == "/global/css/3ds.css") {
+        res.writeHead(200, { 'Content-Type': 'text/css' });
+        const data = fs.readFileSync('global/css/3ds.css', 'utf8');
         res.end(data);
     
     // javascript files
@@ -47,6 +59,14 @@ const server = http.createServer((req, res) => {
         res.end(data);
     
     // images
+    } else if (req.url == "/global/image/3ds/bg.png") {
+        res.writeHead(200, { 'Content-Type': 'image/png' });
+        const data = fs.readFileSync('global/image/3ds/bg.png');
+        res.end(data);
+    } else if (req.url == "/global/image/3ds/logo-3ds.png") {
+        res.writeHead(200, { 'Content-Type': 'image/png' });
+        const data = fs.readFileSync('global/image/3ds/logo-3ds.png');
+        res.end(data);
     } else if (req.url == "/global/image/gfx/discord.webp") {
         res.writeHead(200, { 'Content-Type': 'image/webp' });
         const data = fs.readFileSync('global/image/gfx/discord.webp');
@@ -111,7 +131,11 @@ const server = http.createServer((req, res) => {
         const data = fs.readFileSync('global/sfx/wiiu/WAV_248_GUESS_BANK_MEN.wav');
         res.end(data);
 
-    // 404
+    // other
+    } else if (req.url == "/revNet.zip") {
+        res.writeHead(200, { 'Content-Type': 'application/zip' });
+        const data = fs.readFileSync('global/revNet.zip');
+        res.end(data);
     } else {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end(`<html><body style="font-family: Arial, Helvetica, sans-serif;"><h1><b>oops...</b></h1>we either didn't archive this page yet, or you hit an unknown page</body></html>`);

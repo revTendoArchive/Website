@@ -1,0 +1,46 @@
+:root {
+    --tile: url("/global/image/3ds/bg.png");
+    --tile-to-x: 0px;
+    --tile-to-y: -150px;
+
+    --page: #08080a;
+    --surface: #16161a;
+    --surface-lip: #202026;
+    --line: #2e2e35;
+
+    --ink: #d5d5da;
+    --ink-dim: #9a9aa2;
+    --ink-strong: #ffffff;
+    --ink-glow: rgba(0, 0, 0, 0.85);
+
+    --accent: #ff5555;
+    --accent-deep: #ff8a8a;
+
+    --nav-a: #ff2d2d;
+    --nav-b: #a30000;
+
+    --track-a: #101014;
+    --track-b: #1c1c22;
+
+    --shadow-soft: 0 6px 24px rgba(0, 0, 0, 0.55);
+    --shadow-lift: 0 12px 34px rgba(0, 0, 0, 0.7);
+    --inset: inset 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.first-header {
+    font-family: "Bank Gothic", var(--display);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.first-header img {
+    width: clamp(5rem, 3rem + 6vw, 8rem);
+    height: auto;
+    position: relative;
+    top: 0.1em;
+}
+
+.kv {
+    background: #000;
+    color: var(--ink-strong);
+}
