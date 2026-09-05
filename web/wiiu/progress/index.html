@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#006ce0">
+    <meta name="description" content="What works so far on Wii U.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wii U progress - revTendo">
+    <meta property="og:description" content="What works so far on Wii U.">
+    <meta property="og:image" content="/global/image/logo.png">
+    <title>Wii U progress - revTendo</title>
+    <link rel="icon" href="/global/tabicon.png" type="image/png">
+    <link rel="preload" href="/global/font/FOT-RodinNTLG Pro DB.otf" as="font" type="font/otf" crossorigin>
+    <link rel="stylesheet" href="/global/css/base.css">
+    <link rel="stylesheet" href="/global/css/wiiu.css">
+
+    <script src="/global/functions/constants.js" defer></script>
+    <script src="/global/functions/sfx.js" defer></script>
+    <script src="/global/functions/progress.js" defer></script>
+
+    <!-- dynamically built page elements -->
+    <script src="/global/functions/navbar.js" defer></script>
+    <script src="/global/functions/footer.js" defer></script>
+</head>
+<body>
+    <nav class="top-header" aria-label="Main" id="navbar">
+        <!-- dynamically filled -->
+    </nav>
+
+    <main>
+        <h1 class="first-header">Wii U progress</h1>
+
+        <section class="info-card">
+            <div class="card-header">- Progress -</div>
+            <div class="card-body">
+                <div class="progress-readout">
+                    <span class="label">Overall</span>
+                    <span class="value" data-progress-value>0%</span>
+                </div>
+                <div class="progressbar" role="progressbar" aria-label="Wii U progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <span></span>
+                </div>
+
+                <div class="progress-group">
+                    <h3>Front end</h3>
+                    <ul class="progress-list">
+                        <li data-done="true">eShop loads on hardware</li>
+                        <li data-done="true">Shop browsing and title pages</li>
+                        <li data-done="false">News feed</li>
+                    </ul>
+                </div>
+                <div class="progress-group">
+                    <h3>Back end</h3>
+                    <ul class="progress-list">
+                        <li data-done="true">Shop data API (samurai)</li>
+                        <li data-done="true">Account and auth (ninja)</li>
+                        <li data-done="false">Title downloads</li>
+                    </ul>
+                </div>
+                <div class="progress-group">
+                    <h3>Release</h3>
+                    <ul class="progress-list">
+                        <li data-done="false">Inkay patch</li>
+                        <li data-done="false">Public setup guide</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="button-row">
+            <a class="pill-button bacU" href="/wiiu/">Back to Wii U</a>
+            <a class="pill-button" href="#">To top</a>
+            <a class="pill-button" href="/">Home Page</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+
+    </footer>
+</body>
+</html>

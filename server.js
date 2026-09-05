@@ -15,6 +15,10 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         const data = fs.readFileSync('web/staff/index.html', 'utf8');
         res.end(data);
+    } else if (req.url == "/support/") {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        const data = fs.readFileSync('web/support/index.html', 'utf8');
+        res.end(data);
     } else if (req.url == "/3ds/") {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         const data = fs.readFileSync('web/3ds/index.html', 'utf8');
@@ -26,6 +30,10 @@ const server = http.createServer((req, res) => {
     } else if (req.url == "/wiiu/") {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         const data = fs.readFileSync('web/wiiu/index.html', 'utf8');
+        res.end(data);
+    } else if (req.url == "/wiiu/progress/") {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        const data = fs.readFileSync('web/wiiu/progress/index.html', 'utf8');
         res.end(data);
 
     // font files
