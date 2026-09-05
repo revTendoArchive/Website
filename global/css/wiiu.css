@@ -1,0 +1,35 @@
+:root {
+    --tile: url("/global/image/wiiu/bg.png");
+    --tile-to-x: 0px;
+    --tile-to-y: 150px;
+
+    --page: #fdfdfd;
+    --surface: #f5f5f5;
+    --surface-lip: #ffffff;
+    --line: #e0e0e0;
+
+    --ink: #6d6d6d;
+    --ink-dim: #9a9a9a;
+    --ink-strong: #9fb4c2;
+
+    --accent: #22a8ff;
+    --accent-deep: #006ce0;
+
+    --nav-a: #22a8ff;
+    --nav-b: #006ce0;
+
+    --track-a: #e6e6e6;
+    --track-b: #f2f2f2;
+}
+
+.first-header {
+    font-family: "Digital Sans", var(--display);
+    letter-spacing: 0.02em;
+}
+
+.first-header img {
+    width: clamp(2rem, 1rem + 3vw, 3.5rem);
+    height: auto;
+    position: relative;
+    top: -0.08em;
+}

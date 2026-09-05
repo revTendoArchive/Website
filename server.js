@@ -7,6 +7,10 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         const data = fs.readFileSync('web/index.html', 'utf8');
         res.end(data);
+    } else if (req.url == "/faq/") {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        const data = fs.readFileSync('web/faq/index.html', 'utf8');
+        res.end(data);
     } else if (req.url == "/staff/") {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         const data = fs.readFileSync('web/staff/index.html', 'utf8');
@@ -18,6 +22,10 @@ const server = http.createServer((req, res) => {
     } else if (req.url == "/3ds/progress/") {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         const data = fs.readFileSync('web/3ds/progress/index.html', 'utf8');
+        res.end(data);
+    } else if (req.url == "/wiiu/") {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        const data = fs.readFileSync('web/wiiu/index.html', 'utf8');
         res.end(data);
 
     // font files
@@ -33,6 +41,10 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'application/font-woff2' });
         const data = fs.readFileSync('global/font/MarvelouzTube Font 3.ttf');
         res.end(data);
+    } else if (req.url == "/global/font/Digital%20Sans%20EF%20Medium.ttf") {
+        res.writeHead(200, { 'Content-Type': 'application/font-woff2' });
+        const data = fs.readFileSync('global/font/Digital Sans EF Medium.ttf');
+        res.end(data);
 
     // css files
     } else if (req.url == "/global/css/base.css") {
@@ -46,6 +58,10 @@ const server = http.createServer((req, res) => {
     } else if (req.url == "/global/css/3ds.css") {
         res.writeHead(200, { 'Content-Type': 'text/css' });
         const data = fs.readFileSync('global/css/3ds.css', 'utf8');
+        res.end(data);
+    } else if (req.url == "/global/css/wiiu.css") {
+        res.writeHead(200, { 'Content-Type': 'text/css' });
+        const data = fs.readFileSync('global/css/wiiu.css', 'utf8');
         res.end(data);
     
     // javascript files
@@ -83,9 +99,33 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'image/png' });
         const data = fs.readFileSync('global/image/wiiu/lamp_on.png');
         res.end(data);
+    } else if (req.url == "/global/image/wiiu/bg.png") {
+        res.writeHead(200, { 'Content-Type': 'image/png' });
+        const data = fs.readFileSync('global/image/wiiu/bg.png');
+        res.end(data);
     } else if (req.url == "/global/image/wiiu/lamp_off.png") {
         res.writeHead(200, { 'Content-Type': 'image/png' });
         const data = fs.readFileSync('global/image/wiiu/lamp_off.png');
+        res.end(data);
+    } else if (req.url == "/global/image/wiiu/logo-wiiu.png") {
+        res.writeHead(200, { 'Content-Type': 'image/png' });
+        const data = fs.readFileSync('global/image/wiiu/logo-wiiu.png');
+        res.end(data);
+    } else if (req.url == "/global/image/screenshots/screenshot1.webp") {
+        res.writeHead(200, { 'Content-Type': 'image/webp' });
+        const data = fs.readFileSync('global/image/screenshots/screenshot1.webp');
+        res.end(data);
+    } else if (req.url == "/global/image/screenshots/screenshot2.webp") {
+        res.writeHead(200, { 'Content-Type': 'image/webp' });
+        const data = fs.readFileSync('global/image/screenshots/screenshot2.webp');
+        res.end(data);
+    } else if (req.url == "/global/image/screenshots/screenshot3.webp") {
+        res.writeHead(200, { 'Content-Type': 'image/webp' });
+        const data = fs.readFileSync('global/image/screenshots/screenshot3.webp');
+        res.end(data);
+    } else if (req.url == "/global/image/screenshots/screenshot4.webp") {
+        res.writeHead(200, { 'Content-Type': 'image/webp' });
+        const data = fs.readFileSync('global/image/screenshots/screenshot4.webp');
         res.end(data);
     } else if (req.url == "/global/image/gfx/discord.webp") {
         res.writeHead(200, { 'Content-Type': 'image/webp' });
