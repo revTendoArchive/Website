@@ -15,6 +15,10 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         const data = fs.readFileSync('web/3ds/index.html', 'utf8');
         res.end(data);
+    } else if (req.url == "/3ds/progress/") {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        const data = fs.readFileSync('web/3ds/progress/index.html', 'utf8');
+        res.end(data);
 
     // font files
     } else if (req.url == "/global/font/FOT-RodinNTLG%20Pro%20DB.otf") {
@@ -24,6 +28,10 @@ const server = http.createServer((req, res) => {
     } else if (req.url == "/global/font/bank%20gothic%20medium%20bt.ttf") {
         res.writeHead(200, { 'Content-Type': 'application/font-woff2' });
         const data = fs.readFileSync('global/font/bank gothic medium bt.ttf');
+        res.end(data);
+    } else if (req.url == "/global/font/MarvelouzTube%20Font%203.ttf") {
+        res.writeHead(200, { 'Content-Type': 'application/font-woff2' });
+        const data = fs.readFileSync('global/font/MarvelouzTube Font 3.ttf');
         res.end(data);
 
     // css files
@@ -53,6 +61,10 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'application/javascript' });
         const data = fs.readFileSync('global/functions/navbar.js', 'utf8');
         res.end(data);
+    } else if (req.url == "/global/functions/progress.js") {
+        res.writeHead(200, { 'Content-Type': 'application/javascript' });
+        const data = fs.readFileSync('global/functions/progress.js', 'utf8');
+        res.end(data);
     } else if (req.url == "/global/functions/sfx.js") {
         res.writeHead(200, { 'Content-Type': 'application/javascript' });
         const data = fs.readFileSync('global/functions/sfx.js', 'utf8');
@@ -66,6 +78,14 @@ const server = http.createServer((req, res) => {
     } else if (req.url == "/global/image/3ds/logo-3ds.png") {
         res.writeHead(200, { 'Content-Type': 'image/png' });
         const data = fs.readFileSync('global/image/3ds/logo-3ds.png');
+        res.end(data);
+    } else if (req.url == "/global/image/wiiu/lamp_on.png") {
+        res.writeHead(200, { 'Content-Type': 'image/png' });
+        const data = fs.readFileSync('global/image/wiiu/lamp_on.png');
+        res.end(data);
+    } else if (req.url == "/global/image/wiiu/lamp_off.png") {
+        res.writeHead(200, { 'Content-Type': 'image/png' });
+        const data = fs.readFileSync('global/image/wiiu/lamp_off.png');
         res.end(data);
     } else if (req.url == "/global/image/gfx/discord.webp") {
         res.writeHead(200, { 'Content-Type': 'image/webp' });
