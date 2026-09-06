@@ -8,6 +8,7 @@ let parent = _____WB$wombat$assign$function_____("parent");
 let frames = _____WB$wombat$assign$function_____("frames");
 let opener = _____WB$wombat$assign$function_____("opener");
 (() => {
+    document.body.style.opacity = 1;
     const base = document.currentScript
         ? document.currentScript.src.replace(/functions\/progress\.js.*$/, "")
         : "/global/";
